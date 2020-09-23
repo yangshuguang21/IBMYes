@@ -1,3 +1,4 @@
+
 {
   "inbounds": [
     {
@@ -5,29 +6,28 @@
         "enabled": true,
         "destOverride": ["http", "tls"]
       },
-      "port": 8080,
-      "listen":"0.0.0.0",
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "V2_ID",
-            "alterId": ALTER_ID
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/V2_PATH"
-        }
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {},
+              "port": 8080,
+              "protocol": "vless",
+              "settings": {
+                "decryption": "none",
+                "clients": [
+                  {
+                    "id": "V2_ID"
+                  }
+                ]
+              },
+              "streamSettings": {
+                "network":"ws",
+                "wsSettings": {
+                  "path": "/V2_PATH"
+                }
+              }
+            }
+          ],
+          "outbounds": [
+            {
+              "protocol": "freedom",
+              "settings": {},
       "tag": "direct"
     },
     {
