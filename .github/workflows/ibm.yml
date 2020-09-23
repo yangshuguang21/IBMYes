@@ -1,4 +1,4 @@
-name: IBM Cloud Deploy
+name: IBM Cloud Deploy 
 
 on:
   workflow_dispatch:
